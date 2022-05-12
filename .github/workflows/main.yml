@@ -16,7 +16,8 @@ jobs:
         ]
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Clone repo
+        uses: actions/checkout@v3
 
       - name: Install ncnn
         uses: zchrissirhcz/ncnn-installer@v0.1
