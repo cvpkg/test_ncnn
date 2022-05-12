@@ -42,7 +42,7 @@ jobs:
       - name: build test not windows
         if: matrix.os != 'windows-latest'
         run: cmake --build .
-        working-directory: test/build
+        working-directory: build
       - name: configure windows
         run: cmake . -B build
         if: matrix.os == 'windows-latest'
@@ -50,13 +50,13 @@ jobs:
       - name: build windows
         if: matrix.os == 'windows-latest'
         run: cmake --build . --config Release
-        working-directory: test/build
+        working-directory: build
       - name: run test not windows
         if: matrix.os != 'windows-latest'
         run: ./testbed
-        working-directory: test/build
+        working-directory: build
       - name: run test windows
         if: matrix.os == 'windows-latest'
         run: testbed.exe
-        working-directory: test/build
+        working-directory: build
         shell: cmd
