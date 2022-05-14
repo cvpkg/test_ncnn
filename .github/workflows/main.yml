@@ -24,7 +24,7 @@ jobs:
         uses: seanmiddleditch/gha-setup-ninja@v3
 
       - name: Install ncnn
-        uses: zchrissirhcz/ncnn-installer@v0.1
+        uses: cvpkg/ncnn-installer@v0.1
 
       - name: install gcc-10 on macOs
         if: matrix.os == 'macOs-latest'
